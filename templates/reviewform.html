@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% from "_formhelpers.html" import render_field %}
+{% block content %}
+<div class="content-area enter-news">
+    <section class="section center-text">
+        <div class="container">
+            <progress class="progress is-primary" value="30" max="100">30%</progress>
+            <h1 class="title is-spaced is-2 is-uppercase analysis-heading">Enter News</h1>
+        </div>
+    </section>
+    <section class="section news-form">
+        <div class="columns spaced-side">
+            <div class="column content is-medium">
+                <p>
+                    Please enter the title of the news and submit. The input will be analysed
+                    using the selected algorithm and you will get a result.
+                </p>
+            </div>
+            <form class="column" method="POST" action="/results">
+                <div class="field">
+                    {{ render_field(form.newsreview, class="textarea is-info", placeholder="Enter news", cols='30', rows='10') }}
+                    <p class="help is-info">Text must be at least 15 characters long</p>
+                </div>
+                <div class="field select-algorithm">
+                    <p>Select algorithm: </p>
+                    <div class="control">
+                        <div class="select is-success is-rounded">
+                            {{ form.comp_select }}
+                        </div>
+                    </div>
+                </div>
+                <div class="field spaced-top">
+                    <div class="control center-text">
+                        <input type="submit" value="Submit" name="submit_btn"
+                               class="button is-large is-success">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

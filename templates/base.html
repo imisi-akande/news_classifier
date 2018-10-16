@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{ title }} - Fake News Detector</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link href="https://fonts.googleapis.com/css?family=Secular+One" rel="stylesheet">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+    </head>
+    <body>
+        <nav class="navbar is-info" role="navigation" aria-label="main navigation">
+            <div class="container">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="{{ url_for('home') }}">
+                        <h1 class="logo">Fake News Detector</h1>
+                    </a>
+                    <div class="navbar-burger" data-target="navMenu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="navbar-menu" id="navMenu">
+                    <div class="navbar-end">
+                        <a href="{{ url_for('home') }}" class="navbar-item">
+                          Home
+                        </a>
+                        <a href="{{ url_for('index') }}" class="navbar-item">
+                          Analysis
+                        </a>
+                        <a href="{{ url_for('about') }}" class="navbar-item">
+                          About
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        {% block content %}
+        {% endblock %}
+        <footer class="footer page-footer is-info">
+            <div class="container">
+                <div class="content has-text-centered">
+                <p>
+                    &copy; Tochukwu Eze 2018. All Rights Reserved
+                </p>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

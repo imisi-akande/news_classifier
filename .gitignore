@@ -1,0 +1,4 @@
+# Finder stuff
+.DS_Store
+*.pyc
+.idea

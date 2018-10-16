@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="content-area">
+    <section class="hero is-primary is-bold">
+        <div class="hero-body">
+            <div class="container hero-text">
+                <q class="title">
+                    Lies sound like facts to those who have been conditioned to mis-recognize the truth
+                </q>
+                <p><cite> - Dashanna Stokes</cite></p>
+            </div>
+        </div>
+    </section>
+    <section class="section columns news-sample">
+        <div class="column">
+            <div class="card news-sample-real">
+                <header class="card-header">
+                    <p class="card-header-title has-text-centered">
+                        Is it the latest Real News in the world
+                    </p>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        A man feared to have died after falling into a hot spring in
+                        YellowStone National Park
+                    </div>
+                </div>
+                <footer class="card-footer">
+                    <p class="card-footer-item">Real News</p>
+                </footer>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card news-sample-fake">
+                <header class="card-header">
+                    <p class="card-header-title">
+                        Or the latest Fake News in the world
+                    </p>
+                </header>
+                <div class="card-content">
+                    <div class="content">
+                        Hillary to be indicted after losing to Donald Trump in the
+                        2016 United States Elections
+                    </div>
+                </div>
+                <footer class="card-footer">
+                    <p class="card-footer-item">Fake News</p>
+                </footer>
+            </div>
+        </div>
+    </section>
+    <section class="hero is-primary is-bold start">
+        <div class="hero-body center-text">
+            <h1 class="title">Knowledge is Power</h1>
+            <h2 class="subtitle">
+                Corrupt information can lead to confusion
+            </h2>
+            <a  href="{{ url_for('index') }}" class="button is-info is-hovered is-large is-rounded is-outlined">
+                Start News Analysis
+            </a>
+        </div>
+    </section>
+</div>
+{% endblock %}

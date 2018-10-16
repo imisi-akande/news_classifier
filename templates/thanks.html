@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="content-area thanks">
+    <section class="section center-text">
+        <div class="container">
+            <progress class="progress is-primary" value="100" max="100"></progress>
+            <h1 class="title is-spaced is-2 is-uppercase analysis-heading">Completed</h1>
+        </div>
+    </section>
+    <section class="hero center-text spaced-bottom">
+        <div class="container">
+            <h1 class="title is-spaced has-text-info">
+                <i class="fas fa-thumbs-up fa-5x"></i>
+            </h1>
+            <h2 class="subtitle">
+                Thank you for your feedback
+            </h2>
+        </div>
+
+        <div class="control spaced-top center-text">
+            <form action="/">
+                <input type=submit value='Submit another review'
+                       class="button is-dark is-rounded is-large">
+            </form>
+        </div>
+    </section>
+</div>
+
+{% endblock %}

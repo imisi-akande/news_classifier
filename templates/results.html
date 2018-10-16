@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="content-area results">
+    <section class="section center-text">
+        <div class="container">
+            <progress class="progress is-primary" value="70" max="100"></progress>
+            <h1 class="title is-spaced is-uppercase is-2 analysis-heading">Result</h1>
+        </div>
+    </section>
+    <section class="section result-news">
+        <div class="columns spaced-side">
+            <div class="column content">
+                <article class="message is-medium">
+                    <div class="message-header">
+                        <p>Your news input</p>
+                    </div>
+                    <div class="message-body">
+                        {{ content }}
+                    </div>
+                </article>
+            </div>
+            <div class="column predictions">
+                <article>
+                    <h2 class="title is-3 is-spaced has-text-info">PREDICTION</h2>
+                    <p class="content is-large">This news is
+                        {% if prediction == 'real' %}
+                            <span class="tag is-large is-success is-uppercase">
+                                {{ prediction }}
+                            </span>
+                        {% elif prediction == 'fake' %}
+                            <span class="tag is-large is-danger is-uppercase">
+                                {{ prediction }}
+                            </span>
+                        {% endif %}
+                    </p>
+                    <p class="content is-large">Probability:
+                        <span class="has-text-weight-semibold">{{ probability }}%</span>
+                    </p>
+                    <p class="content is-large">Algorithm:
+                        <span class="has-text-weight-semibold">{{ algos }}</span>
+                    </p>
+                </article>
+                <form action="/thanks" method="POST"
+                      class="field is-grouped is-grouped-centered spaced-top">
+                    <div class="control">
+                        <input type="submit" value="Correct" name="feedback_button"
+                                       class="button is-medium is-success is-outlined">
+                    </div>
+                    <div class="control">
+                        <input type="submit" value="Incorrect" name="feedback_button"
+                                       class="button is-medium is-danger is-outlined">
+                    </div>
+                    <input type="hidden" value="{{ prediction }}" name="prediction">
+		            <input type="hidden" value="{{ content }}" name="review">
+                </form>
+                <form action="/" class="control spaced-top">
+                    <input type="submit" value="Submit another review"
+                           class="button is-dark is-rounded">
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

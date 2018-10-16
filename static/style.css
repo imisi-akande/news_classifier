@@ -1,0 +1,129 @@
+/************* HOME **************/
+
+body {
+    min-height: 100vh;
+    position: relative;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.hero-text {
+    line-height: 3;
+}
+
+.hero-text cite {
+    float: right;
+}
+
+.news-sample-real .card-footer {
+    background-color: green;
+    color: white;
+}
+
+.news-sample-fake .card-footer {
+    background-color: red;
+    color: white;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.start a {
+    color: green;
+}
+
+.button.is-info.is-outlined {
+    border-color: white;
+    color: white;
+}
+
+.page-footer {
+    padding: 3rem;
+}
+
+.analysis-heading {
+    font-family: 'Secular One', sans-serif;
+}
+
+/************* ABOUT **************/
+
+.content-area {
+    min-height: calc(100vh - 172px);
+}
+
+.about-container {
+    line-height: 2;
+    font-size: 1.3em;
+}
+
+.get-started {
+    padding: 2rem;
+}
+
+
+/************* ANALYSIS **************/
+
+.news-form .content p {
+    padding-right: 1.5rem;
+}
+
+.select-algorithm {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.select-algorithm p {
+    margin-right: 10px;
+}
+
+.spaced-top {
+    margin-top: 3rem;
+}
+
+.spaced-bottom {
+    margin-bottom: 2rem;
+}
+
+.results input {
+    padding: 0 2rem;
+}
+
+.results .predictions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/************* MEDIA QUERIES **************/
+
+@media screen and (min-width: 1024px) {
+    .hero-text {
+        max-width: 55%;
+    }
+
+    .spaced-side {
+        max-width: 85%;
+        margin: 0 auto;
+    }
+
+    .news-sample {
+        max-width: 65%;
+        margin: 0 auto;
+    }
+
+    .about-container {
+        max-width: 55%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .spaced-side {
+        max-width: 75%;
+        margin: 0 auto;
+    }
+}
